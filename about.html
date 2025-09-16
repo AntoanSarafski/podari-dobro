@@ -4,33 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>За нас - СНЦ "ПОДАРИ ДОБРО"</title>
+  <title>СНЦ "ПОДАРИ ДОБРО" – За нас</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>За нас</h1>
-  <nav>
-    <a href="index.html">Начало</a>
-    <a href="news.html">Новини</a>
-    <a href="events.html">Събития</a>
-    <a href="about.html">За нас</a>
-    <a href="contacts.html">Контакти</a>
-  </nav>
-</header>
-<div class="container">
-  <div class="card">
-    <h2>Чл. 8. „ПОДАРИ ДОБРО”</h2>
+  <!-- Тук ще се зареди header.html -->
+  <div id="header"></div>
+
+  <div class="content">
+    <h1>За нас</h1>
+    <p><strong>Чл.8. „ПОДАРИ ДОБРО”:</strong></p>
     <ol>
-      <li>Предоставя и управлява социални услуги на територията на Област Разград;</li>
-      <li>Провежда обучения в областта на предоставяне на социални услуги;</li>
-      <li>Извършва по възлагане от компетентни органи проверки на дейността на други субекти, предоставящи социални услуги;</li>
-      <li>Осъществява и друга дейност, свързана с предоставянето на социални услуги.</li>
+      <li>предоставя и управлява социални услуги на територията на Област Разград;</li>
+      <li>провежда обучения в областта на предоставяне на социални услуги на територията на Област Разград;</li>
+      <li>извършва по възлагане от компетентни органи проверки на дейността на други субекти предоставящи социални услуги;</li>
+      <li>осъществява и друга дейност, свързана с предоставянето на социални услуги.</li>
     </ol>
   </div>
-</div>
-<footer>
-  <p>© 2025 СНЦ "ПОДАРИ ДОБРО" | Всички права запазени</p>
-</footer>
+
+  <!-- Тук ще се зареди footer.html -->
+  <div id="footer"></div>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
 </body>
 </html>
