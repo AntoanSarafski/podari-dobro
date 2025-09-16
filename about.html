@@ -12,19 +12,25 @@ window.addEventListener('DOMContentLoaded', () => {
 </script>
 </head>
 <body>
-<div id="header"></div>
-<div class="container">
-  <h2>За нас</h2>
-  <div class="card">
-    <h2>Чл. 8. „ПОДАРИ ДОБРО”</h2>
-    <ol>
-      <li>Предоставя и управлява социални услуги на територията на Област Разград;</li>
-      <li>Провежда обучения в областта на предоставяне на социални услуги;</li>
-      <li>Извършва по възлагане от компетентни органи проверки на дейността на други субекти, предоставящи социални услуги;</li>
-      <li>Осъществява и друга дейност, свързана с предоставянето на социални услуги.</li>
-    </ol>
+  <div id="header"></div>
+
+  <div class="content">
+    <h1>За нас</h1>
+    <!-- съдържанието на страницата -->
   </div>
-</div>
-<div id="footer"></div>
+
+  <div id="footer"></div>
+
+  <script>
+    // Зареждане на header.html
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+
+    // Зареждане на footer.html
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
 </body>
 </html>
